@@ -1,0 +1,907 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY cv-ontology "http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#"
+     xml:base="http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:cv-ontology="http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#details_from -->
+
+    <owl:ObjectProperty rdf:about="&cv-ontology;details_from">
+        <rdfs:domain rdf:resource="&cv-ontology;person"/>
+        <rdfs:range rdf:resource="&cv-ontology;reference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#has_a -->
+
+    <owl:ObjectProperty rdf:about="&cv-ontology;has_a">
+        <rdfs:range rdf:resource="&cv-ontology;extra"/>
+        <rdfs:domain rdf:resource="&cv-ontology;person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#has_done -->
+
+    <owl:ObjectProperty rdf:about="&cv-ontology;has_done">
+        <rdfs:domain rdf:resource="&cv-ontology;person"/>
+        <rdfs:range rdf:resource="&cv-ontology;projects"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#has_skill -->
+
+    <owl:ObjectProperty rdf:about="&cv-ontology;has_skill">
+        <rdfs:domain rdf:resource="&cv-ontology;person"/>
+        <rdfs:range rdf:resource="&cv-ontology;skills"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#studied_in -->
+
+    <owl:ObjectProperty rdf:about="&cv-ontology;studied_in">
+        <rdfs:range rdf:resource="&cv-ontology;education"/>
+        <rdfs:domain rdf:resource="&cv-ontology;person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#worked_in -->
+
+    <owl:ObjectProperty rdf:about="&cv-ontology;worked_in">
+        <rdfs:range rdf:resource="&cv-ontology;organization"/>
+        <rdfs:domain rdf:resource="&cv-ontology;person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#Association_possition -->
+
+    <owl:DatatypeProperty rdf:about="&cv-ontology;Association_possition">
+        <rdfs:domain rdf:resource="&cv-ontology;association"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#education_location -->
+
+    <owl:DatatypeProperty rdf:about="&cv-ontology;education_location">
+        <rdfs:domain rdf:resource="&cv-ontology;education"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#education_name -->
+
+    <owl:DatatypeProperty rdf:about="&cv-ontology;education_name">
+        <rdfs:domain rdf:resource="&cv-ontology;education"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#end_date -->
+
+    <owl:DatatypeProperty rdf:about="&cv-ontology;end_date">
+        <rdfs:domain rdf:resource="&cv-ontology;organization"/>
+        <rdfs:domain rdf:resource="&cv-ontology;school"/>
+        <rdfs:domain rdf:resource="&cv-ontology;university"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#extra_activity_name -->
+
+    <owl:DatatypeProperty rdf:about="&cv-ontology;extra_activity_name">
+        <rdfs:domain rdf:resource="&cv-ontology;extra"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#first_name -->
+
+    <owl:DatatypeProperty rdf:about="&cv-ontology;first_name">
+        <rdfs:domain rdf:resource="&cv-ontology;person"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#industrial_title -->
+
+    <owl:DatatypeProperty rdf:about="&cv-ontology;industrial_title">
+        <rdfs:domain rdf:resource="&cv-ontology;industry"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#job_title -->
+
+    <owl:DatatypeProperty rdf:about="&cv-ontology;job_title">
+        <rdfs:domain rdf:resource="&cv-ontology;organization"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#last_name -->
+
+    <owl:DatatypeProperty rdf:about="&cv-ontology;last_name">
+        <rdfs:domain rdf:resource="&cv-ontology;person"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#level_of_skill -->
+
+    <owl:DatatypeProperty rdf:about="&cv-ontology;level_of_skill">
+        <rdfs:domain rdf:resource="&cv-ontology;skills"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#name_of_skill -->
+
+    <owl:DatatypeProperty rdf:about="&cv-ontology;name_of_skill">
+        <rdfs:domain rdf:resource="&cv-ontology;skills"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#organization_name -->
+
+    <owl:DatatypeProperty rdf:about="&cv-ontology;organization_name">
+        <rdfs:domain rdf:resource="&cv-ontology;organization"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#person_ID -->
+
+    <owl:DatatypeProperty rdf:about="&cv-ontology;person_ID">
+        <rdfs:domain rdf:resource="&cv-ontology;person"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#person_address -->
+
+    <owl:DatatypeProperty rdf:about="&cv-ontology;person_address">
+        <rdfs:domain rdf:resource="&cv-ontology;person"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#person_birthday -->
+
+    <owl:DatatypeProperty rdf:about="&cv-ontology;person_birthday">
+        <rdfs:domain rdf:resource="&cv-ontology;person"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#person_contact_num -->
+
+    <owl:DatatypeProperty rdf:about="&cv-ontology;person_contact_num">
+        <rdfs:domain rdf:resource="&cv-ontology;person"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#person_email -->
+
+    <owl:DatatypeProperty rdf:about="&cv-ontology;person_email">
+        <rdfs:domain rdf:resource="&cv-ontology;person"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#person_gender -->
+
+    <owl:DatatypeProperty rdf:about="&cv-ontology;person_gender">
+        <rdfs:domain rdf:resource="&cv-ontology;person"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#person_linkedIn -->
+
+    <owl:DatatypeProperty rdf:about="&cv-ontology;person_linkedIn">
+        <rdfs:domain rdf:resource="&cv-ontology;person"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#project_name -->
+
+    <owl:DatatypeProperty rdf:about="&cv-ontology;project_name">
+        <rdfs:domain rdf:resource="&cv-ontology;projects"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#project_submited -->
+
+    <owl:DatatypeProperty rdf:about="&cv-ontology;project_submited">
+        <rdfs:domain rdf:resource="&cv-ontology;projects"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#project_technologies -->
+
+    <owl:DatatypeProperty rdf:about="&cv-ontology;project_technologies">
+        <rdfs:domain rdf:resource="&cv-ontology;projects"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#publication_conference -->
+
+    <owl:DatatypeProperty rdf:about="&cv-ontology;publication_conference">
+        <rdfs:domain rdf:resource="&cv-ontology;publication"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#reference_location -->
+
+    <owl:DatatypeProperty rdf:about="&cv-ontology;reference_location">
+        <rdfs:domain rdf:resource="&cv-ontology;reference"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#reference_mobile -->
+
+    <owl:DatatypeProperty rdf:about="&cv-ontology;reference_mobile">
+        <rdfs:domain rdf:resource="&cv-ontology;reference"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#reference_name -->
+
+    <owl:DatatypeProperty rdf:about="&cv-ontology;reference_name">
+        <rdfs:domain rdf:resource="&cv-ontology;reference"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#school_AL_result -->
+
+    <owl:DatatypeProperty rdf:about="&cv-ontology;school_AL_result">
+        <rdfs:domain rdf:resource="&cv-ontology;school"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#sport_awarded_place -->
+
+    <owl:DatatypeProperty rdf:about="&cv-ontology;sport_awarded_place">
+        <rdfs:domain rdf:resource="&cv-ontology;sport"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#start_date -->
+
+    <owl:DatatypeProperty rdf:about="&cv-ontology;start_date">
+        <rdfs:domain rdf:resource="&cv-ontology;organization"/>
+        <rdfs:domain rdf:resource="&cv-ontology;school"/>
+        <rdfs:domain rdf:resource="&cv-ontology;university"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#university_GPA -->
+
+    <owl:DatatypeProperty rdf:about="&cv-ontology;university_GPA">
+        <rdfs:domain rdf:resource="&cv-ontology;university"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#university_course_name -->
+
+    <owl:DatatypeProperty rdf:about="&cv-ontology;university_course_name">
+        <rdfs:domain rdf:resource="&cv-ontology;university"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#association -->
+
+    <owl:Class rdf:about="&cv-ontology;association">
+        <rdfs:subClassOf rdf:resource="&cv-ontology;extra"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#development -->
+
+    <owl:Class rdf:about="&cv-ontology;development">
+        <rdfs:subClassOf rdf:resource="&cv-ontology;projects"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#education -->
+
+    <owl:Class rdf:about="&cv-ontology;education"/>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#extra -->
+
+    <owl:Class rdf:about="&cv-ontology;extra"/>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#industry -->
+
+    <owl:Class rdf:about="&cv-ontology;industry">
+        <rdfs:subClassOf rdf:resource="&cv-ontology;reference"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#language -->
+
+    <owl:Class rdf:about="&cv-ontology;language">
+        <rdfs:subClassOf rdf:resource="&cv-ontology;skills"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#lecturer -->
+
+    <owl:Class rdf:about="&cv-ontology;lecturer">
+        <rdfs:subClassOf rdf:resource="&cv-ontology;reference"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#organization -->
+
+    <owl:Class rdf:about="&cv-ontology;organization"/>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#person -->
+
+    <owl:Class rdf:about="&cv-ontology;person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#personal -->
+
+    <owl:Class rdf:about="&cv-ontology;personal">
+        <rdfs:subClassOf rdf:resource="&cv-ontology;skills"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#projects -->
+
+    <owl:Class rdf:about="&cv-ontology;projects"/>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#publication -->
+
+    <owl:Class rdf:about="&cv-ontology;publication">
+        <rdfs:subClassOf rdf:resource="&cv-ontology;projects"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#reference -->
+
+    <owl:Class rdf:about="&cv-ontology;reference"/>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#school -->
+
+    <owl:Class rdf:about="&cv-ontology;school">
+        <rdfs:subClassOf rdf:resource="&cv-ontology;education"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#skills -->
+
+    <owl:Class rdf:about="&cv-ontology;skills"/>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#sport -->
+
+    <owl:Class rdf:about="&cv-ontology;sport">
+        <rdfs:subClassOf rdf:resource="&cv-ontology;extra"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#technical -->
+
+    <owl:Class rdf:about="&cv-ontology;technical">
+        <rdfs:subClassOf rdf:resource="&cv-ontology;skills"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#university -->
+
+    <owl:Class rdf:about="&cv-ontology;university">
+        <rdfs:subClassOf rdf:resource="&cv-ontology;education"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#extra_Leo -->
+
+    <owl:NamedIndividual rdf:about="&cv-ontology;extra_Leo">
+        <rdf:type rdf:resource="&cv-ontology;association"/>
+        <Association_possition rdf:datatype="&xsd;string">Active Member</Association_possition>
+        <extra_activity_name rdf:datatype="&xsd;string">LEO Club, University of Keleniya</extra_activity_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#extra_baseball -->
+
+    <owl:NamedIndividual rdf:about="&cv-ontology;extra_baseball">
+        <rdf:type rdf:resource="&cv-ontology;sport"/>
+        <extra_activity_name rdf:datatype="&xsd;string">Baseball</extra_activity_name>
+        <sport_awarded_place rdf:datatype="&xsd;string">Participation</sport_awarded_place>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#extra_carom -->
+
+    <owl:NamedIndividual rdf:about="&cv-ontology;extra_carom">
+        <rdf:type rdf:resource="&cv-ontology;sport"/>
+        <extra_activity_name rdf:datatype="&xsd;string">Carom</extra_activity_name>
+        <sport_awarded_place rdf:datatype="&xsd;string">nter faculty games-2nd runner up</sport_awarded_place>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#extra_sesa -->
+
+    <owl:NamedIndividual rdf:about="&cv-ontology;extra_sesa">
+        <rdf:type rdf:resource="&cv-ontology;association"/>
+        <Association_possition rdf:datatype="&xsd;string">Committe Member</Association_possition>
+        <extra_activity_name rdf:datatype="&xsd;string">Software Engineering Students&apos; Association</extra_activity_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#language_eng -->
+
+    <owl:NamedIndividual rdf:about="&cv-ontology;language_eng">
+        <rdf:type rdf:resource="&cv-ontology;language"/>
+        <level_of_skill rdf:datatype="&xsd;string">English Language</level_of_skill>
+        <name_of_skill rdf:datatype="&xsd;string">Good</name_of_skill>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#language_sin -->
+
+    <owl:NamedIndividual rdf:about="&cv-ontology;language_sin">
+        <rdf:type rdf:resource="&cv-ontology;language"/>
+        <level_of_skill rdf:datatype="&xsd;string">Native</level_of_skill>
+        <name_of_skill rdf:datatype="&xsd;string">Sinhala Language</name_of_skill>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#organaization_NSB -->
+
+    <owl:NamedIndividual rdf:about="&cv-ontology;organaization_NSB">
+        <rdf:type rdf:resource="&cv-ontology;organization"/>
+        <start_date rdf:datatype="&xsd;dateTime">2013-10-01</start_date>
+        <end_date rdf:datatype="&xsd;dateTime">2014-02-31</end_date>
+        <job_title rdf:datatype="&xsd;string">Banking Assistant(Trainee)</job_title>
+        <organization_name rdf:datatype="&xsd;string">NSB Bank,Badulla</organization_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#organization_Nibaya -->
+
+    <owl:NamedIndividual rdf:about="&cv-ontology;organization_Nibaya">
+        <rdf:type rdf:resource="&cv-ontology;organization"/>
+        <start_date rdf:datatype="&xsd;dateTime">2017-10-01</start_date>
+        <end_date rdf:datatype="&xsd;dateTime">2018-03-01</end_date>
+        <organization_name rdf:datatype="&xsd;string">MyDigitalOffice (PVT) LTD, Kiribathgoda</organization_name>
+        <job_title rdf:datatype="&xsd;string">Trainee Software Engineer</job_title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#person_menaka -->
+
+    <owl:NamedIndividual rdf:about="&cv-ontology;person_menaka">
+        <rdf:type rdf:resource="&cv-ontology;person"/>
+        <person_contact_num rdf:datatype="&xsd;int">0771651069</person_contact_num>
+        <person_birthday rdf:datatype="&xsd;string">1994-01-23</person_birthday>
+        <last_name rdf:datatype="&xsd;string">Disanayaka</last_name>
+        <person_gender rdf:datatype="&xsd;string">Male</person_gender>
+        <first_name rdf:datatype="&xsd;string">Menaka</first_name>
+        <person_address rdf:datatype="&xsd;string">No-01,Ketawala, Landewela,Badulla</person_address>
+        <person_linkedIn rdf:datatype="&xsd;string">https://www.linkedin.com/in/menaka-disanayaka-8820b2146/</person_linkedIn>
+        <person_email rdf:datatype="&xsd;string">madushanmenaka94@gmail.com</person_email>
+        <has_skill rdf:resource="&cv-ontology;language_eng"/>
+        <has_skill rdf:resource="&cv-ontology;language_sin"/>
+        <has_skill rdf:resource="&cv-ontology;personal_leader"/>
+        <has_skill rdf:resource="&cv-ontology;personal_team"/>
+        <has_skill rdf:resource="&cv-ontology;personal_under"/>
+        <details_from rdf:resource="&cv-ontology;reference_MR_Chamli"/>
+        <details_from rdf:resource="&cv-ontology;referene_DR_Gamini"/>
+        <has_skill rdf:resource="&cv-ontology;technical_ASP.NET"/>
+        <has_skill rdf:resource="&cv-ontology;technical_Angular"/>
+        <has_skill rdf:resource="&cv-ontology;technical_MySQL"/>
+        <has_skill rdf:resource="&cv-ontology;technical_SQLServer"/>
+        <has_skill rdf:resource="&cv-ontology;technical_Spring"/>
+        <has_skill rdf:resource="&cv-ontology;technical_css"/>
+        <has_skill rdf:resource="&cv-ontology;technical_html"/>
+        <has_skill rdf:resource="&cv-ontology;technical_java"/>
+        <has_skill rdf:resource="&cv-ontology;technical_java_script"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#personal_leader -->
+
+    <owl:NamedIndividual rdf:about="&cv-ontology;personal_leader">
+        <rdf:type rdf:resource="&cv-ontology;personal"/>
+        <level_of_skill rdf:datatype="&xsd;string">80%</level_of_skill>
+        <name_of_skill rdf:datatype="&xsd;string">Leadership</name_of_skill>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#personal_team -->
+
+    <owl:NamedIndividual rdf:about="&cv-ontology;personal_team">
+        <rdf:type rdf:resource="&cv-ontology;personal"/>
+        <name_of_skill rdf:datatype="&xsd;string">90%</name_of_skill>
+        <level_of_skill rdf:datatype="&xsd;string">Team Work</level_of_skill>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#personal_under -->
+
+    <owl:NamedIndividual rdf:about="&cv-ontology;personal_under">
+        <rdf:type rdf:resource="&cv-ontology;personal"/>
+        <level_of_skill rdf:datatype="&xsd;string">99%</level_of_skill>
+        <name_of_skill rdf:datatype="&xsd;string">Work Under pressure</name_of_skill>
+        <has_a rdf:resource="&cv-ontology;extra_Leo"/>
+        <has_a rdf:resource="&cv-ontology;extra_baseball"/>
+        <has_a rdf:resource="&cv-ontology;extra_carom"/>
+        <has_a rdf:resource="&cv-ontology;extra_sesa"/>
+        <worked_in rdf:resource="&cv-ontology;organaization_NSB"/>
+        <studied_in rdf:resource="&cv-ontology;organaization_NSB"/>
+        <worked_in rdf:resource="&cv-ontology;organization_Nibaya"/>
+        <has_done rdf:resource="&cv-ontology;project_GPS"/>
+        <has_done rdf:resource="&cv-ontology;project_payroll"/>
+        <has_done rdf:resource="&cv-ontology;project_sinhala_Voice"/>
+        <studied_in rdf:resource="&cv-ontology;school_post_secondary"/>
+        <studied_in rdf:resource="&cv-ontology;school_primary"/>
+        <studied_in rdf:resource="&cv-ontology;school_secondary"/>
+        <studied_in rdf:resource="&cv-ontology;university_kelaniya"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#project_GPS -->
+
+    <owl:NamedIndividual rdf:about="&cv-ontology;project_GPS">
+        <rdf:type rdf:resource="&cv-ontology;development"/>
+        <project_submited rdf:datatype="&xsd;dateTime">2018-11-10</project_submited>
+        <project_technologies rdf:datatype="&xsd;string">Arduino,PHP (CodeIgnitor Framework), Android,
+JavaScript,MySQL, HTML, CSS, GoDaddy</project_technologies>
+        <project_name rdf:datatype="&xsd;string">GPS based Tracking Wearable</project_name>
+        <publication_conference rdf:datatype="&xsd;string">IEEE 2018</publication_conference>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#project_payroll -->
+
+    <owl:NamedIndividual rdf:about="&cv-ontology;project_payroll">
+        <rdf:type rdf:resource="&cv-ontology;development"/>
+        <project_submited rdf:datatype="&xsd;dateTime">2016-8-10</project_submited>
+        <project_technologies rdf:datatype="&xsd;string">C#, SQL Server, Crystal Report</project_technologies>
+        <project_name rdf:datatype="&xsd;string">Payroll System</project_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#project_sinhala_Voice -->
+
+    <owl:NamedIndividual rdf:about="&cv-ontology;project_sinhala_Voice">
+        <rdf:type rdf:resource="&cv-ontology;publication"/>
+        <project_submited rdf:datatype="&xsd;dateTime">2019-1-21</project_submited>
+        <project_technologies rdf:datatype="&xsd;string">C#, SQL Server</project_technologies>
+        <project_name rdf:datatype="&xsd;string">SInhala voice recognition for the disabled person</project_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#reference_MR_Chamli -->
+
+    <owl:NamedIndividual rdf:about="&cv-ontology;reference_MR_Chamli">
+        <rdf:type rdf:resource="&cv-ontology;industry"/>
+        <reference_mobile rdf:datatype="&xsd;string">0714141421</reference_mobile>
+        <industrial_title rdf:datatype="&xsd;string">CEO</industrial_title>
+        <reference_name rdf:datatype="&xsd;string">Dr. Chamli Pushpakumara,
+</reference_name>
+        <reference_location rdf:datatype="&xsd;string">Head of the Department,
+Department of Applied Computing,
+Faculty of Computing and Technology,
+University of Kelaniya,
+Sri Lanka,
+</reference_location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#referene_DR_Gamini -->
+
+    <owl:NamedIndividual rdf:about="&cv-ontology;referene_DR_Gamini">
+        <rdf:type rdf:resource="&cv-ontology;reference"/>
+        <reference_mobile rdf:datatype="&xsd;string">0714254247
+</reference_mobile>
+        <reference_location rdf:datatype="&xsd;string">Dean,
+Faculty of Computing and Technology,
+University of Kelaniya,
+Sri Lanka,
+</reference_location>
+        <reference_name rdf:datatype="&xsd;string">Dr.Gamini Wijayarathna,</reference_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#school_post_secondary -->
+
+    <owl:NamedIndividual rdf:about="&cv-ontology;school_post_secondary">
+        <rdf:type rdf:resource="&cv-ontology;school"/>
+        <start_date rdf:datatype="&xsd;dateTime">2010-09-01</start_date>
+        <end_date rdf:datatype="&xsd;dateTime">2012-8-31</end_date>
+        <education_name rdf:datatype="&xsd;string">Badulla Central College</education_name>
+        <education_location rdf:datatype="&xsd;string">Keppetipola Road, Badulla</education_location>
+        <school_AL_result rdf:datatype="&xsd;string">Physics-A, Chemistry-B, Combined Mathes-B, Englis-S</school_AL_result>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#school_primary -->
+
+    <owl:NamedIndividual rdf:about="&cv-ontology;school_primary">
+        <rdf:type rdf:resource="&cv-ontology;school"/>
+        <start_date rdf:datatype="&xsd;dateTime">1998-1-10</start_date>
+        <end_date rdf:datatype="&xsd;dateTime">2003-12-31</end_date>
+        <education_name rdf:datatype="&xsd;string">B/ Kandegedara Central College</education_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#school_secondary -->
+
+    <owl:NamedIndividual rdf:about="&cv-ontology;school_secondary">
+        <rdf:type rdf:resource="&cv-ontology;school"/>
+        <start_date rdf:datatype="&xsd;dateTime">2004-01-01</start_date>
+        <end_date rdf:datatype="&xsd;dateTime">2009-12-31</end_date>
+        <education_name rdf:datatype="&xsd;string">Badulla Central College</education_name>
+        <education_location rdf:datatype="&xsd;string">Keppetipola Road,Badulla</education_location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#technical_ASP.NET -->
+
+    <owl:NamedIndividual rdf:about="&cv-ontology;technical_ASP.NET">
+        <rdf:type rdf:resource="&cv-ontology;technical"/>
+        <level_of_skill rdf:datatype="&xsd;string">50%
+</level_of_skill>
+        <name_of_skill rdf:datatype="&xsd;string">ASP.Net</name_of_skill>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#technical_Angular -->
+
+    <owl:NamedIndividual rdf:about="&cv-ontology;technical_Angular">
+        <rdf:type rdf:resource="&cv-ontology;technical"/>
+        <level_of_skill rdf:datatype="&xsd;string">40%</level_of_skill>
+        <name_of_skill rdf:datatype="&xsd;string">Angular</name_of_skill>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#technical_MySQL -->
+
+    <owl:NamedIndividual rdf:about="&cv-ontology;technical_MySQL">
+        <rdf:type rdf:resource="&cv-ontology;technical"/>
+        <level_of_skill rdf:datatype="&xsd;string">50%</level_of_skill>
+        <name_of_skill rdf:datatype="&xsd;string">Mysql database</name_of_skill>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#technical_SQLServer -->
+
+    <owl:NamedIndividual rdf:about="&cv-ontology;technical_SQLServer">
+        <rdf:type rdf:resource="&cv-ontology;technical"/>
+        <level_of_skill rdf:datatype="&xsd;string">45%</level_of_skill>
+        <name_of_skill rdf:datatype="&xsd;string">MS Sql</name_of_skill>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#technical_Spring -->
+
+    <owl:NamedIndividual rdf:about="&cv-ontology;technical_Spring">
+        <rdf:type rdf:resource="&cv-ontology;technical"/>
+        <level_of_skill rdf:datatype="&xsd;string">50%</level_of_skill>
+        <name_of_skill rdf:datatype="&xsd;string">Spring framework</name_of_skill>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#technical_css -->
+
+    <owl:NamedIndividual rdf:about="&cv-ontology;technical_css">
+        <rdf:type rdf:resource="&cv-ontology;technical"/>
+        <level_of_skill rdf:datatype="&xsd;string">70%</level_of_skill>
+        <name_of_skill rdf:datatype="&xsd;string">CSS</name_of_skill>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#technical_html -->
+
+    <owl:NamedIndividual rdf:about="&cv-ontology;technical_html">
+        <rdf:type rdf:resource="&cv-ontology;technical"/>
+        <level_of_skill rdf:datatype="&xsd;string">80%</level_of_skill>
+        <name_of_skill rdf:datatype="&xsd;string">HTML</name_of_skill>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#technical_java -->
+
+    <owl:NamedIndividual rdf:about="&cv-ontology;technical_java">
+        <rdf:type rdf:resource="&cv-ontology;technical"/>
+        <level_of_skill rdf:datatype="&xsd;string">50%</level_of_skill>
+        <name_of_skill rdf:datatype="&xsd;string">Java</name_of_skill>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#technical_java_script -->
+
+    <owl:NamedIndividual rdf:about="&cv-ontology;technical_java_script">
+        <rdf:type rdf:resource="&cv-ontology;technical"/>
+        <level_of_skill rdf:datatype="&xsd;string">50%</level_of_skill>
+        <name_of_skill rdf:datatype="&xsd;string">Java Script</name_of_skill>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/disanayaka/ontologies/2018/11/cv-ontology.owl#university_kelaniya -->
+
+    <owl:NamedIndividual rdf:about="&cv-ontology;university_kelaniya">
+        <rdf:type rdf:resource="&cv-ontology;university"/>
+        <university_GPA rdf:datatype="&xsd;string">2.93</university_GPA>
+        <start_date rdf:datatype="&xsd;dateTime">2015-2-25</start_date>
+        <end_date rdf:datatype="&xsd;dateTime">2019-2-8</end_date>
+        <university_course_name rdf:datatype="&xsd;string">Bsc in Software Engineering</university_course_name>
+        <education_location rdf:datatype="&xsd;string">Dalugama, Kelaniya, Sri lanka</education_location>
+        <education_name rdf:datatype="&xsd;string">University Of Kelaniya</education_name>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
